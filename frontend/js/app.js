@@ -1,8 +1,8 @@
 const API_URL = 'http://localhost:3000/api';
 
 // Global State
-let userToken = localStorage.getItem('sattva_token');
-let userData = JSON.parse(localStorage.getItem('sattva_user'));
+let userToken = localStorage.getItem('fatloss_token');
+let userData = JSON.parse(localStorage.getItem('fatloss_user'));
 let currentPlan = null;
 let currentDay = 'Monday';
 
@@ -101,8 +101,8 @@ async function handleLogin(e) {
         if (res.ok) {
             userToken = data.token;
             userData = data.user;
-            localStorage.setItem('sattva_token', userToken);
-            localStorage.setItem('sattva_user', JSON.stringify(userData));
+            localStorage.setItem('fatloss_token', userToken);
+            localStorage.setItem('fatloss_user', JSON.stringify(userData));
             checkContextAndRoute();
             showToast('Welcome back!');
         } else {
@@ -117,8 +117,8 @@ function logout() {
     userToken = null;
     userData = null;
     currentPlan = null;
-    localStorage.removeItem('sattva_token');
-    localStorage.removeItem('sattva_user');
+    localStorage.removeItem('fatloss_token');
+    localStorage.removeItem('fatloss_user');
     checkContextAndRoute();
     showToast('Logged out');
 }

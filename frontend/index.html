@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sattva | India-Focused Fat Loss Diet Planner</title>
+    <title>Fatloss Diet Planner | India-Focused</title>
     <!-- Modern Font -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <!-- Background Decoration -->
@@ -15,7 +17,7 @@
     <div class="bg-shape shape-2"></div>
 
     <nav class="navbar">
-        <div class="logo">Sattva<span class="dot">.</span></div>
+        <div class="logo">Fatloss Diet Planner<span class="dot">.</span></div>
         <div class="auth-buttons" id="nav-auth">
             <button class="btn btn-outline" onclick="showView('login')">Log In</button>
             <button class="btn btn-primary" onclick="showView('register')">Get Started</button>
@@ -27,15 +29,18 @@
     </nav>
 
     <main class="container">
-        
+
         <!-- View: Landing -->
         <section id="view-landing" class="view fade-in">
             <div class="hero">
                 <div class="hero-content">
                     <div class="badge">Next Generation Diet Engine 🔥</div>
-                    <h1 class="hero-title">Your AI-Powered <span class="gradient-text">Indian Regional</span> Diet Planner.</h1>
-                    <p class="hero-subtitle">Experience a hyper-personalized fat loss journey tailored to your specific Indian regional cuisine and lifestyle conditions like Thyroid, Diabetes, and Hypertension.</p>
-                    <button class="btn btn-primary btn-large glow-btn" onclick="showView('register')">Start Your Journey</button>
+                    <h1 class="hero-title">Your AI-Powered <span class="gradient-text">Indian Regional</span> Diet
+                        Planner.</h1>
+                    <p class="hero-subtitle">Experience a hyper-personalized fat loss journey tailored to your specific
+                        Indian regional cuisine and lifestyle conditions like Thyroid, Diabetes, and Hypertension.</p>
+                    <button class="btn btn-primary btn-large glow-btn" onclick="showView('register')">Start Your
+                        Journey</button>
                 </div>
             </div>
         </section>
@@ -55,7 +60,8 @@
                         <input type="password" id="login-password" required placeholder="••••••••">
                     </div>
                     <button type="submit" class="btn btn-primary full-width">Sign In</button>
-                    <p class="switch-form">New here? <a href="#" onclick="showView('register')">Create an account</a></p>
+                    <p class="switch-form">New here? <a href="#" onclick="showView('register')">Create an account</a>
+                    </p>
                 </form>
             </div>
         </section>
@@ -79,7 +85,8 @@
                         <input type="password" id="reg-password" required placeholder="••••••••">
                     </div>
                     <button type="submit" class="btn btn-primary full-width">Create Account</button>
-                    <p class="switch-form">Already have an account? <a href="#" onclick="showView('login')">Log in</a></p>
+                    <p class="switch-form">Already have an account? <a href="#" onclick="showView('login')">Log in</a>
+                    </p>
                 </form>
             </div>
         </section>
@@ -89,7 +96,7 @@
             <div class="form-container">
                 <h2>Generate Your Diet Plan</h2>
                 <p>Tell us about yourself to create a highly accurate regional diet</p>
-                
+
                 <form id="form-profile" class="grid-form">
                     <div class="input-group">
                         <label>Age</label>
@@ -113,7 +120,7 @@
                             <option value="very_active">Very Active (Physical job or intense daily training)</option>
                         </select>
                     </div>
-                    
+
                     <div class="input-group divider-group">
                         <h3>Regional & Health Preferences</h3>
                     </div>
@@ -179,12 +186,14 @@
             </div>
 
             <div class="grocery-panel mt-bot glass-panel wide relative" style="max-width: 100%;">
-                <h2 style="margin-bottom: 20px; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">🛒 Aggregate Weekly Grocery List</h2>
+                <h2
+                    style="margin-bottom: 20px; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                    🛒 Aggregate Weekly Grocery List</h2>
                 <div class="grocery-grid" id="grocery-list">
                     <!-- Populated via JS -->
                 </div>
             </div>
-            
+
             <div class="text-center mt-bot">
                 <button class="btn btn-outline" onclick="showView('profile')">Edit Preferences & Regenerate</button>
             </div>
@@ -197,4 +206,5 @@
 
     <script src="js/app.js"></script>
 </body>
+
 </html>
