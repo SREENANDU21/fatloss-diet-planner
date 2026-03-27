@@ -194,8 +194,9 @@
                 </div>
             </div>
 
-            <div class="text-center mt-bot">
-                <button class="btn btn-outline" onclick="showView('profile')">Edit Preferences & Regenerate</button>
+            <div class="text-center mt-bot" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-outline" onclick="showView('profile')">Edit Preferences</button>
+                <button class="btn btn-primary glow-btn" id="btn-new-rec" onclick="handleRegenerate()">✨ Create New Recommendation</button>
             </div>
         </section>
 

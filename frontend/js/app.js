@@ -164,6 +164,46 @@ async function handleProfileSubmit(e) {
     }
 }
 
+async function handleRegenerate() {
+    const btn = document.getElementById('btn-new-rec');
+    if (btn) btn.innerHTML = "Generating ⏳...";
+    
+    // Profile is already populated in the hidden form
+    const profile = {
+        age: document.getElementById('prof-age').value,
+        weight: document.getElementById('prof-weight').value,
+        height: document.getElementById('prof-height').value,
+        activity_level: document.getElementById('prof-activity').value,
+        region: document.getElementById('prof-region').value,
+        goal: document.getElementById('prof-goal').value,
+        disease: document.getElementById('prof-disease').value
+    };
+
+    try {
+        const res = await fetch(`${API_URL}/profile`, {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${userToken}`
+            },
+            body: JSON.stringify(profile)
+        });
+        const data = await res.json();
+        
+        if (res.ok) {
+            currentPlan = data.plan;
+            renderDashboard();
+            showToast('New recommendation generated!');
+        } else {
+            showToast('Failed to generate plan');
+        }
+    } catch (e) {
+        showToast('Server error during generation');
+    } finally {
+        if (btn) btn.innerHTML = "✨ Create New Recommendation";
+    }
+}
+
 function fillProfileForm(profile) {
     if(!profile) return;
     document.getElementById('prof-age').value = profile.age || '';
