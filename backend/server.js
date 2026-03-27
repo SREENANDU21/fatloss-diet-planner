@@ -9,7 +9,7 @@ const generateDietPlan = require('./dietEngine');
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 const JWT_SECRET = 'super-secret-fatloss-key-2026';
 
