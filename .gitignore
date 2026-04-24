@@ -1,3 +1,4 @@
 node_modules/
 database.sqlite
 .env
+__pycache__/
